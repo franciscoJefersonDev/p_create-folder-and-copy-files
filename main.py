@@ -2,7 +2,7 @@ import os
 import shutil
 
 entries = os.listdir('my-folder')
-dir = '/home/francisco/Área de Trabalho/workspace/python/automization/create-folder-and-copy-file/'
+dir = '/home/francisco/Área de Trabalho/workspace/python/automization/create-folder-and-copy-file/teste'
 dirFiles = '/home/francisco/Área de Trabalho/workspace/python/automization/create-folder-and-copy-file/my-folder/'
 for entry in entries:
     directoryDir = entry.split('.')[0]
