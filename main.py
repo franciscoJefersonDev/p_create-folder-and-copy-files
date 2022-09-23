@@ -11,12 +11,3 @@ for entry in entries:
     folder = os.path.join(dir, directoryDir)
     os.mkdir(folder)
     shutil.copyfile(file, folder + '/' + entry, follow_symlinks=True)
-    # print(file)
-    # print(folder)
-    # shutil.copyfile(file, folder+entry, follow_symlinks=True)
-    # os.mkdir(path)
-    # print(path)
-    # shutil.copyfile(file, folder)
-
-# shutil.copyfile(dirFiles+'L100_F001_A001.pdf', '/')
-
