@@ -1,13 +1,18 @@
 import os
+from os import path
 import shutil
-
-entries = os.listdir('my-folder')
-dir = '/home/francisco/Área de Trabalho/workspace/python/automization/create-folder-and-copy-file/teste'
-dirFiles = '/home/francisco/Área de Trabalho/workspace/python/automization/create-folder-and-copy-file/my-folder/'
+# ==========
+# print(path.abspath('')
+fromDir = 'my-folder'
+toDir = 'teste'
+entries = os.listdir(path.abspath(fromDir))
+# ==========
 for entry in entries:
     directoryDir = entry.split('.')[0]
     directoryFile = entry
-    file = os.path.join(dirFiles, directoryFile)
-    folder = os.path.join(dir, directoryDir)
+    folder = os.path.join(path.abspath(toDir), directoryDir)
     os.mkdir(folder)
-    shutil.copyfile(file, folder + '/' + entry, follow_symlinks=True)
+    file = os.path.join(path.abspath(fromDir), directoryFile)
+    fileCopy = '{folder}/{entry}'.format(folder=folder, entry=entry)
+    shutil.copyfile(file, fileCopy, follow_symlinks=True)
+# ===========
